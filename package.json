@@ -1,7 +1,7 @@
 {
-  "name": "nextra-docs-template",
+  "name": "snippets",
   "version": "0.0.1",
-  "description": "Nextra docs template",
+  "description": "Random code snippets",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shuding/nextra-docs-template.git"
+    "url": "git+https://github.com/Tittoh/snippets.git"
   },
-  "author": "Shu Ding <g@shud.in>",
+  "author": "Tittoh",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shuding/nextra-docs-template/issues"
+    "url": "https://github.com/Tittoh/snippets/issues"
   },
-  "homepage": "https://github.com/shuding/nextra-docs-template#readme",
+  "homepage": "https://github.com/Tittoh/snippets#readme",
   "dependencies": {
     "@code-hike/mdx": "^0.8.0",
     "@mdx-js/loader": "^2.2.1",

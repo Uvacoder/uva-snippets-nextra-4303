@@ -1,17 +1,19 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
+import Footer from './components/layout/footer'
+import Logo from './components/layout/logo'
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: <Logo />,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://github.com/Tittoh/snippets',
   },
-  chat: {
-    link: 'https://discord.com',
+  docsRepositoryBase: 'https://github.com/Tittoh/snippets',
+  sidebar: {
+    defaultMenuCollapseLevel: 0,
   },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
   footer: {
-    text: 'Nextra Docs Template',
+    text: <Footer />,
   },
 }
 
