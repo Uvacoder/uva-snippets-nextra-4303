@@ -1,0 +1,325 @@
+import Mandala from "../../components/examples/mandala";
+
+<Mandala />
+
+# Mandala
+
+A mandala is a geometric configuration of symbols.
+
+
+## Component
+
+<CH.Code>
+
+  ```jsx mandala.jsx
+  const Mandala = () => {
+    return (
+      <div className="mandala-wrapper bg-gray-900">
+        <div className="mandala-container animate-colors" aria-hidden="true">
+          <div className="mandala-translate">
+            <svg
+              width="675"
+              height="675"
+              viewBox="0 0 675 675"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="mandala"
+            >
+              <defs>
+                <path
+                  d="M337.5,337.5 m-320,0 a320,320 0 1,1 640,0 a320,320 0 1,1 -640,0"
+                  id="circle1"
+                ></path>
+                <path
+                  d="M337.5,337.5 m-280,0 a280,280 0 1,1 560,0 a280,280 0 1,1 -560,0"
+                  id="circle2"
+                ></path>
+                <path
+                  d="M337.5,337.5 m-240,0 a240,240 0 1,1 480,0 a240,240 0 1,1 -480,0"
+                  id="circle3"
+                ></path>
+                <path
+                  d="M337.5,337.5 m-200,0 a200,200 0 1,1 400,0 a200,200 0 1,1 -400,0"
+                  id="circle4"
+                ></path>
+                <path
+                  d="M337.5,337.5 m-160,0 a160,160 0 1,1 320,0 a160,160 0 1,1 -320,0"
+                  id="circle5"
+                ></path>
+              </defs>
+              <text className="mandala-accent-1" dy="70" textLength="2010">
+                <animateTransform
+                  attributeName="transform"
+                  begin="0s"
+                  dur="500s"
+                  type="rotate"
+                  from="0 337.5 337.5"
+                  to="360 337.5 337.5"
+                  repeatCount="indefinite"
+                ></animateTransform>
+                <textPath textLength="2010" href="#circle1">
+                  &nbsp;&nbsp;&nbsp;/<tspan>/</tspan>/<tspan>/</tspan>/
+                  <tspan>/</tspan>/<tspan>/</tspan>/<tspan>/</tspan>/
+                  <tspan>/</tspan>&nbsp;&nbsp;&nbsp;/<tspan>/</tspan>/
+                  <tspan>/</tspan>/<tspan>/</tspan>/<tspan>/</tspan>/
+                  <tspan>/</tspan>/<tspan>/</tspan>&nbsp;&nbsp;&nbsp;/
+                  <tspan>/</tspan>/<tspan>/</tspan>/<tspan>/</tspan>/
+                  <tspan>/</tspan>/<tspan>/</tspan>/<tspan>/</tspan>
+                  &nbsp;&nbsp;&nbsp;/<tspan>/</tspan>/<tspan>/</tspan>/
+                  <tspan>/</tspan>/<tspan>/</tspan>/<tspan>/</tspan>/
+                  <tspan>/</tspan>&nbsp;&nbsp;&nbsp;/<tspan>/</tspan>/
+                  <tspan>/</tspan>/<tspan>/</tspan>/<tspan>/</tspan>/
+                  <tspan>/</tspan>/<tspan>/</tspan>&nbsp;&nbsp;&nbsp;/
+                  <tspan>/</tspan>/<tspan>/</tspan>/<tspan>/</tspan>/
+                  <tspan>/</tspan>/<tspan>/</tspan>/<tspan>/</tspan>
+                  &nbsp;&nbsp;&nbsp;/<tspan>/</tspan>/<tspan>/</tspan>/
+                  <tspan>/</tspan>/<tspan>/</tspan>/<tspan>/</tspan>/
+                  <tspan>/</tspan>
+                </textPath>
+              </text>
+              <text className="mandala-accent-2" dy="70" textLength="1760">
+                <animateTransform
+                  attributeName="transform"
+                  begin="0s"
+                  dur="500s"
+                  type="rotate"
+                  from="360 337.5 337.5"
+                  to="0 337.5 337.5"
+                  repeatCount="indefinite"
+                ></animateTransform>
+                <textPath textLength="1760" href="#circle2">
+                  &nbsp;&nbsp;1<tspan>1</tspan>0<tspan>0</tspan>1<tspan>0</tspan>
+                  &nbsp;&nbsp;0<tspan>1</tspan>0<tspan>1</tspan>0<tspan>1</tspan>
+                  &nbsp;&nbsp;1<tspan>0</tspan>1<tspan>0</tspan>1<tspan>0</tspan>
+                  &nbsp;&nbsp;0<tspan>1</tspan>0<tspan>1</tspan>0<tspan>1</tspan>
+                  &nbsp;&nbsp;1<tspan>0</tspan>1<tspan>0</tspan>1<tspan>0</tspan>
+                  &nbsp;&nbsp;0<tspan>1</tspan>0<tspan>1</tspan>0<tspan>1</tspan>
+                  &nbsp;&nbsp;1<tspan>0</tspan>1<tspan>1</tspan>0<tspan>0</tspan>
+                </textPath>
+              </text>
+              <text className="mandala-accent-3" dy="70" textLength="1507">
+                <animateTransform
+                  attributeName="transform"
+                  begin="0s"
+                  dur="500s"
+                  type="rotate"
+                  from="0 337.5 337.5"
+                  to="360 337.5 337.5"
+                  repeatCount="indefinite"
+                ></animateTransform>
+                <textPath textLength="1507" href="#circle3">
+                  <tspan>&#123;</tspan>&#123;<tspan>&#123;</tspan>&#123;&nbsp;
+                  <tspan>&#125;</tspan>&#125;<tspan>&#125;</tspan>&#125;&nbsp;&nbsp;
+                  <tspan>&#123;</tspan>&#123;<tspan>&#123;</tspan>&#123;&nbsp;
+                  <tspan>&#125;</tspan>&#125;<tspan>&#125;</tspan>&#125;&nbsp;&nbsp;
+                  <tspan>&#123;</tspan>&#123;<tspan>&#123;</tspan>&#123;&nbsp;
+                  <tspan>&#125;</tspan>&#125;<tspan>&#125;</tspan>&#125;&nbsp;&nbsp;
+                  <tspan>&#123;</tspan>&#123;<tspan>&#123;</tspan>&#123;&nbsp;
+                  <tspan>&#125;</tspan>&#125;<tspan>&#125;</tspan>&#125;&nbsp;&nbsp;
+                  <tspan>&#123;</tspan>&#123;<tspan>&#123;</tspan>&#123;&nbsp;
+                  <tspan>&#125;</tspan>&#125;<tspan>&#125;</tspan>&#125;&nbsp;&nbsp;
+                  <tspan>&#123;</tspan>&#123;<tspan>&#123;</tspan>&#123;&nbsp;
+                  <tspan>&#125;</tspan>&#125;<tspan>&#125;</tspan>&#125;&nbsp;&nbsp;
+                </textPath>
+              </text>
+              <text className="mandala-accent-4" dy="70" textLength="1257">
+                <animateTransform
+                  attributeName="transform"
+                  begin="0s"
+                  dur="500s"
+                  type="rotate"
+                  from="360 337.5 337.5"
+                  to="0 337.5 337.5"
+                  repeatCount="indefinite"
+                ></animateTransform>
+                <textPath textLength="1257" href="#circle4">
+                  &nbsp;&nbsp;&nbsp;../../ &nbsp;&nbsp;&nbsp;../../
+                  &nbsp;&nbsp;&nbsp;../../ &nbsp;&nbsp;&nbsp;../../
+                  &nbsp;&nbsp;&nbsp;../../ &nbsp;&nbsp;&nbsp;../../
+                  &nbsp;&nbsp;&nbsp;../../
+                </textPath>
+              </text>
+              <text className="mandala-accent-5" dy="70" textLength="1005">
+                <animateTransform
+                  attributeName="transform"
+                  begin="0s"
+                  dur="500s"
+                  type="rotate"
+                  from="0 337.5 337.5"
+                  to="360 337.5 337.5"
+                  repeatCount="indefinite"
+                ></animateTransform>
+                <textPath textLength="1005" href="#circle5">
+                  <tspan>&lt;&gt;</tspan>&lt;/&gt;<tspan>&lt;&gt;</tspan>&lt;/&gt;
+                  <tspan>&lt;&gt;</tspan>&lt;/&gt;<tspan>&lt;&gt;</tspan>&lt;/&gt;
+                  <tspan>&lt;&gt;</tspan>&lt;/&gt;<tspan>&lt;&gt;</tspan>&lt;/&gt;
+                  <tspan>&lt;&gt;</tspan>&lt;/&gt;<tspan>&lt;&gt;</tspan>&lt;/&gt;
+                  <tspan>&lt;&gt;</tspan>&lt;/&gt;<tspan>&lt;&gt;</tspan>&lt;/&gt;
+                  <tspan>&lt;&gt;</tspan>&lt;/&gt;<tspan>&lt;&gt;</tspan>&lt;/&gt;
+                  <tspan>&lt;&gt;</tspan>&lt;/&gt;<tspan>&lt;&gt;</tspan>&lt;/&gt;
+                  <tspan>&lt;&gt;</tspan>&lt;/&gt;<tspan>&lt;&gt;</tspan>&lt;/&gt;
+                </textPath>
+              </text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    );
+  };
+````
+```postcss mandala.css
+.mandala-wrapper {
+  display: flex;
+  justify: center;
+  align-items:center;
+  height: 600px;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+  width: 100%;
+  z-index: 1;
+}
+
+.mandala-container {
+  --mandala-primary: #52525e;
+  --mandala-accent-1: #c689ff;
+  --mandala-accent-2: #ffd567;
+  --mandala-accent-3: #88ffd1;
+  --mandala-accent-4: #afafba;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.mandala-container .mandala-rotate > svg {
+  animation: rotation 500s linear infinite;
+}
+
+.mandala-container svg {
+  font-size: 1.5rem;
+  font-weight: 300;
+  user-select: none;
+}
+
+.mandala-container svg > text {
+  fill: var(--mandala-primary);
+}
+
+.mandala-container .mandala-accent-1 {
+  font-size: 1.5rem;
+}
+
+.mandala-container .mandala-accent-2 {
+  font-size: 1.2rem;
+  font-family: monospace;
+}
+
+.mandala-container .mandala-accent-3 {
+  font-size: 1.2rem;
+}
+
+.mandala-container .mandala-accent-4 {
+  font-size: 1.1rem;
+}
+
+.mandala-container .mandala-accent-5 {
+  font-size: 1rem;
+}
+
+.mandala-container.animate-colors svg > text > textPath > tspan {
+  fill: var(--mandala-primary);
+  animation: mandala-color-change 50s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.mandala-container.animate-colors .mandala-accent-1 > textPath > tspan {
+  fill: var(--mandala-accent-1);
+  animation-delay: -15s;
+}
+
+.mandala-container.animate-colors .mandala-accent-2 > textPath > tspan {
+  fill: var(--mandala-accent-2);
+  animation-delay: -20s;
+}
+
+.mandala-container.animate-colors .mandala-accent-3 > textPath > tspan {
+  fill: var(--mandala-accent-3);
+  animation-delay: -30s;
+}
+
+.mandala-container.animate-colors .mandala-accent-5 > textPath > tspan {
+  fill: var(--mandala-accent-4);
+  animation-delay: -40s;
+}
+
+@keyframes mandala-color-change {
+  0% {
+    fill: var(--mandala-primary);
+  }
+
+  10% {
+    fill: var(--mandala-primary);
+  }
+
+  15% {
+    fill: var(--mandala-accent-1);
+  }
+
+  20% {
+    fill: var(--mandala-primary);
+  }
+
+  25% {
+    fill: var(--mandala-primary);
+  }
+
+  30% {
+    fill: var(--mandala-accent-2);
+  }
+
+  35% {
+    fill: var(--mandala-primary);
+  }
+
+  40% {
+    fill: var(--mandala-primary);
+  }
+
+  50% {
+    fill: var(--mandala-accent-3);
+  }
+
+  55% {
+    fill: var(--mandala-primary);
+  }
+
+  60% {
+    fill: var(--mandala-primary);
+  }
+
+  65% {
+    fill: var(--mandala-accent-4);
+  }
+
+  70% {
+    fill: var(--mandala-primary);
+  }
+
+  to {
+    fill: var(--mandala-primary);
+  }
+}
+````
+</CH.Code>
+
+## Credits
+
+Adapted from [Mozilla MDN](https://developer.mozilla.org) hero backround animation

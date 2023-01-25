@@ -1,5 +1,5 @@
 const { remarkCodeHike } = require("@code-hike/mdx")
-const theme = require("shiki/themes/material-darker.json")
+const theme = require("./theme.js");
 
 const withNextra = require('nextra')({
   theme: 'nextra-theme-docs',
