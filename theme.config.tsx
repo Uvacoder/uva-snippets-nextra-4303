@@ -9,6 +9,9 @@ const config: DocsThemeConfig = {
     link: 'https://github.com/Tittoh/snippets',
   },
   docsRepositoryBase: 'https://github.com/Tittoh/snippets',
+  editLink: {
+    component: null
+  },
   sidebar: {
     defaultMenuCollapseLevel: 0,
   },
