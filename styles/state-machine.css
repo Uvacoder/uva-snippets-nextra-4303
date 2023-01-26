@@ -1,0 +1,266 @@
+* { box-sizing: border-box; }
+.bcd7sdd {
+  --size: calc(100%);
+  display: flex;
+  flex-direction: column;
+  width: var(--size);
+  height: auto;
+  grid-gap: 0px;
+  font-family: "Lucida Sans", monospace;
+  position: relative;
+}
+.bcd7sdd input {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  width: calc(var(--size) / 30);
+  height: calc(var(--size) / 30);
+  bottom: 8px;
+}
+.bcd7sdd input:nth-child(1) {
+  margin-left: calc(var(--size) / 38);
+}
+.bcd7sdd input:nth-child(2) {
+  margin-left: calc(var(--size) / 15);
+}
+.bcd7sdd input:nth-child(3) {
+  margin-left: calc(var(--size) / 6.7);
+}
+.bcd7sdd input:nth-child(4) {
+  margin-left: calc(var(--size) / 4.3);
+}
+.ssdd {
+  width: 100%;
+  display: flex;
+  justify: center;
+  grid-area: ssd;
+  width: var(--size);
+  background: black;
+  text-align: left;
+  padding-bottom: 1rem;
+  position: relative;
+}
+.ssdd svg {
+  width: 50%;
+  margin-left: calc(var(--size) / 30);
+}
+.ssdd line { stroke-width: 2; }
+.ssdd .digital {
+  position: relative;
+  border-radius: 8px;
+  margin-top:16px;
+  margin-bottom:16px;
+  width: calc(var(--size) * 0.4);
+  top: calc(var(--size) * 0.07);
+  background: rgba(128, 0, 0, 0.33);
+  font-weight: bold;
+}
+.digital > span {
+  border-radius: 10px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgba(33, 0, 0, 0.25);
+}
+.a, .d, .g {
+  width: calc(var(--size) * 0.65);
+  height: calc(var(--size) * 0.05);
+  left: 50%;
+  line-height: calc(var(--size) / 25);
+}
+.a {
+  top: calc(var(--size) * 0.075);
+}
+.d {
+  top: calc(100% - var(--size) * 0.075);
+}
+.g {
+  top: 50%;
+}
+.b, .c, .e, .f {
+  width: calc(var(--size) * 0.085);
+  height: calc(var(--size) * 0.35);
+  line-height: calc(var(--size) / 8);
+}
+.b, .f {
+  top: calc(var(--size) * 0.28);
+}
+.c, .e {
+  top: calc(var(--size) * 0.72);
+}
+.b, .c {
+  left: calc(100% - var(--size) * 0.085);
+}
+.e, .f {
+  left: calc(var(--size) * 0.085);
+}
+
+/* Logic */
+
+.ssdd {
+  --A: initial;
+  --NOT-A: ;
+  --B: initial;
+  --NOT-B: ;
+  --C: initial;
+  --NOT-C: ;
+  --D: initial;
+  --NOT-D: ;
+}
+.bcd7sdd input:nth-of-type(1):checked ~ .ssdd {
+  --A: ;
+  --NOT-A: initial;
+}
+.bcd7sdd input:nth-of-type(2):checked ~ .ssdd {
+  --B: ;
+  --NOT-B: initial;
+}
+.bcd7sdd input:nth-of-type(3):checked ~ .ssdd {
+  --C: ;
+  --NOT-C: initial;
+}
+.bcd7sdd input:nth-of-type(4):checked ~ .ssdd {
+  --D: ;
+  --NOT-D: initial;
+}
+.line-a-in {
+  --on: var(--A) gold;
+  stroke: var(--on, gray)
+}
+.line-b-in {
+  --on: var(--B) cyan;
+  stroke: var(--on, gray)
+}
+.line-not-b {
+  --on: var(--NOT-B) cyan;
+  stroke: var(--on, gray)
+}
+.line-c-in {
+  --on: var(--C) magenta;
+  stroke: var(--on, gray)
+}
+.line-not-c {
+  --on: var(--NOT-C) magenta;
+  stroke: var(--on, gray)
+}
+.line-d-in {
+  --on: var(--D) lime;
+  stroke: var(--on, gray)
+}
+.line-not-d {
+  --on: var(--NOT-D) lime;
+  stroke: var(--on, gray)
+}
+.ssdd {
+  --BD: var(--B) var(--D);
+  --nBnD: var(--NOT-B) var(--NOT-D);
+  --CD: var(--C) var(--D);
+  --nCnD: var(--NOT-C) var(--NOT-D);
+  --CnD: var(--C) var(--NOT-D);
+  --nBC: var(--NOT-B) var(--C);
+  --BnCD: var(--B) var(--NOT-C) var(--D);
+  --BnC: var(--B) var(--NOT-C);
+  --BnD: var(--B) var(--NOT-D);
+  --a: var(--A, var(--C, var(--BD, var(--nBnD))));
+  --b: var(--NOT-B, var(--nCnD, var(--CD)));
+  --c: var(--B, var(--NOT-C, var(--D)));
+  --d: var(--nBnD, var(--CnD, var(--BnCD, var(--nBC, var(--A)))));
+  --e: var(--nBnD, var(--CnD));
+  --f: var(--A, var(--nCnD, var(--BnC, var(--BnD))));
+  --g: var(--A, var(--BnC, var(--nBC, var(--CnD))));
+}
+.line-b-and-d {
+  --on: var(--BD) #8ee;
+  stroke: var(--on, gray);
+}
+.line-nb-and-nd {
+  --on: var(--nBnD) #ee8;
+  stroke: var(--on, gray);
+}
+.line-c-and-d {
+  --on: var(--CD) red;
+  stroke: var(--on, gray);
+}
+.line-nc-and-nd {
+  --on: var(--nCnD) brown;
+  stroke: var(--on, gray);
+}
+.line-c-and-nd {
+  --on: var(--CnD) blue;
+  stroke: var(--on, gray);
+}
+.line-nb-and-c {
+  --on: var(--nBC) purple;
+  stroke: var(--on, gray);
+}
+.line-b-and-nc-and-d {
+  --on: var(--BnCD) #0ff;
+  stroke: var(--on, gray);
+}
+.line-b-and-nc {
+  --on: var(--BnC) #0f8;
+  stroke: var(--on, gray);
+}
+.line-b-and-nd {
+  --on: var(--BnD) #80f;
+  stroke: var(--on, gray);
+}
+.line-a {
+  --on: var(--a) green;
+  stroke: var(--on, gray);
+}
+.line-b {
+  --on: var(--b) green;
+  stroke: var(--on, gray);
+}
+.line-c {
+  --on: var(--c) green;
+  stroke: var(--on, gray);
+}
+.line-d {
+  --on: var(--d) green;
+  stroke: var(--on, gray);
+}
+.line-e {
+  --on: var(--e) green;
+  stroke: var(--on, gray);
+}
+.line-f {
+  --on: var(--f) green;
+  stroke: var(--on, gray);
+}
+.line-g {
+  --on: var(--g) green;
+  stroke: var(--on, gray);
+}
+.a {
+  --on: var(--a) #e00;
+  background: var(--on, #380000);
+}
+.b {
+  --on: var(--b) #e00;
+  background: var(--on, #380000);
+}
+.c {
+  --on: var(--c) #e00;
+  background: var(--on, #380000);
+}
+.d {
+  --on: var(--d) #e00;
+  background: var(--on, #380000);
+}
+.e {
+  --on: var(--e) #e00;
+  background: var(--on, #380000);
+}
+.f {
+  --on: var(--f) #e00;
+  background: var(--on, #380000);
+}
+.g {
+  --on: var(--g) #e00;
+  background: var(--on, #380000);
+}
+.a, .b, .c, .d, .e, .f, .g {
+  box-shadow: 0px 0px 10px var(--on, black);
+}
