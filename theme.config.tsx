@@ -6,9 +6,9 @@ import Logo from './components/layout/logo'
 const config: DocsThemeConfig = {
   logo: <Logo />,
   project: {
-    link: 'https://github.com/Tittoh/snippets',
+    link: 'https://github.com/uvacoder/uva-snippets-nextra',
   },
-  docsRepositoryBase: 'https://github.com/Tittoh/snippets',
+  docsRepositoryBase: 'https://github.com/uvacoder/uva-snippets-nextra',
   editLink: {
     component: null
   },
