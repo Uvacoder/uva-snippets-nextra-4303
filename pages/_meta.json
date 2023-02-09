@@ -7,8 +7,8 @@
     "title": "CSS Stuff",
     "type": "page"
   },
-  "js-snippets": {
-    "title": "JS Snippets",
+  "snippets": {
+    "title": "Snippets",
     "type": "page"
   },
   "other": {
